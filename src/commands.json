@@ -1,0 +1,44 @@
+[
+  {
+    "command":"test",
+    "permission":"Guest",
+    "usage":"what in the world is this nonsense",
+    "timeout":"300",
+    "built-in":"false"
+  },
+  {
+    "command":"ver",
+    "permission":"Guest",
+    "usage":"Shit Bot \"OCR\" v0.0.1PR - By: Agentsix1",
+    "timeout":"300",
+    "built-in":"false"
+  },
+  {
+    "command":"ping",
+    "permission":"Guest",
+    "usage":"Pong!",
+    "timeout":"60",
+    "built-in":"false"
+  },
+  {
+    "command":"time",
+    "permission":"Guest",
+    "usage":"Hello %USER%, the system's time is currently %TIME%",
+    "timeout":"300",
+    "built-in":"false"
+  },
+  {
+    "command":"whoami",
+    "permission":"User",
+    "usage":"N/A",
+    "timeout":"30",
+    "built-in":"true"
+  },
+  {
+    "command":"whois",
+    "permission":"User",
+    "usage":"N/A",
+    "timeout":"30",
+    "built-in":"true"
+  }
+]
