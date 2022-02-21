@@ -48,6 +48,10 @@ To give your self permission to use the bot. Simply open the 'users.json' file a
     "built-in":"false"
   }
   ```
+  ## Command Tags:
+  **%TIME%** - Returns time using format 'hh:mm:ss aa'
+  **%DETAIL_TIME%** - Returns time using format 'hh:mm:ss.SSS aa'
+  **%USER%** - Returns the persons name who is using the command
   
   
   
@@ -60,5 +64,6 @@ To give your self permission to use the bot. Simply open the 'users.json' file a
   6. command aliases
   7. host games
   8. advertise via games
+  9. Trivia
   
   And much much more!
