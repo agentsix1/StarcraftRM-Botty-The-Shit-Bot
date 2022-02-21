@@ -19,11 +19,11 @@ There is no anti spam features built into this program as of the release of the 
 
 
 # Commands Pre-Builtin
-!test
-!ver
-!ping
-!time
-!whoami
+!test  
+!ver  
+!ping  
+!time  
+!whoami  
 !whois
 
 
@@ -49,11 +49,9 @@ To give your self permission to use the bot. Simply open the 'users.json' file a
   }
   ```
   ## Command Tags:
-  **%TIME%** - Returns time using format 'hh:mm:ss aa'
-  
-  **%DETAIL_TIME%** - Returns time using format 'hh:mm:ss.SSS aa'
-  
-  **%USER%** - Returns the persons name who is using the command
+  **%TIME%** - Returns time using format 'hh:mm:ss aa'  
+  **%DETAIL_TIME%** - Returns time using format 'hh:mm:ss.SSS aa'  
+  **%USER%** - Returns the persons name who is using the command  
   
   
   
