@@ -16,3 +16,45 @@ I would highly suggest only running this in eclipse or IntelliJ IDEA.
 # Notes
 Do keep in mind this will take full control of the device it is on and will likely need to be ran on a seperate device to make it worth while.
 There is no anti spam features built into this program as of the release of the initial release.
+
+
+# Commands Pre-Builtin
+!test
+!ver
+!ping
+!time
+!whoami
+!whois
+
+
+# Giving your self permission
+To give your self permission to use the bot. Simply open the 'users.json' file and add the following
+{
+    "user":USERNAME HERE,
+    "added":"2-20-2022 06:58:10",
+    "rank":RANK HERE
+ }
+ 
+ # Adding Commands
+ Adding commands is as simple as adding users. Simply add the following to the 'commands.json' file.
+ {
+    "command":COMMAND HERE,
+    "permission":PERMISSION REQUIRED,
+    "usage":THE TEXT IT WILL SAY,
+    "timeout":"30",
+    "built-in":"false"
+  }
+  
+  
+  
+  # Features to be added
+  1. giving/removing other users permissions
+  2. permissions based of actual users profile names
+  3. timeout being added to commands.
+  4. easily add/remove commands
+  5. moderation
+  6. command aliases
+  7. host games
+  8. advertise via games
+  
+  And much much more!
