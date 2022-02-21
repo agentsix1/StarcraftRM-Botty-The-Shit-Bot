@@ -29,21 +29,25 @@ There is no anti spam features built into this program as of the release of the 
 
 # Giving your self permission
 To give your self permission to use the bot. Simply open the 'users.json' file and add the following
-```{
+```
+{
     "user":USERNAME HERE,
     "added":"2-20-2022 06:58:10",
     "rank":RANK HERE
- }```
+ }
+ ```
  
  # Adding Commands
  Adding commands is as simple as adding users. Simply add the following to the 'commands.json' file.
-``` {
+```
+{
     "command":COMMAND HERE,
     "permission":PERMISSION REQUIRED,
     "usage":THE TEXT IT WILL SAY,
     "timeout":"30",
     "built-in":"false"
-  }```
+  }
+  ```
   
   
   
