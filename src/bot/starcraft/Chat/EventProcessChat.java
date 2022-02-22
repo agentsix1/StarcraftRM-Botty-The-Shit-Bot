@@ -41,7 +41,7 @@ public class EventProcessChat extends Thread {
                     }
                     _process.NewMessages.clear();
                 }
-            } catch (Exception e) { e.printStackTrace(); }
+            } catch (Exception e) { } //e.printStackTrace(); }
         }
     }
 }

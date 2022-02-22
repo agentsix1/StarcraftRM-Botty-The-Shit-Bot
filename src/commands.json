@@ -9,7 +9,7 @@
   {
     "command":"ver",
     "permission":"Guest",
-    "usage":"Shit Bot \"OCR\" v0.0.1PR - By: Agentsix1",
+    "usage":"Shit \"OCR\" v0.0.1PR - By: Agentsix1",
     "timeout":"300",
     "built-in":"false"
   },
@@ -40,5 +40,20 @@
     "usage":"N/A",
     "timeout":"30",
     "built-in":"true"
+  },
+  {
+    "command":"join",
+    "permission":"Admin",
+    "usage":"/join %MSG%",
+    "timeout":"60",
+    "built-in":"false"
+  },
+  {
+    "command":"j",
+    "permission":"Admin",
+    "usage":"/join %MSG%",
+
+    "timeout":"60",
+    "built-in":"false"
   }
 ]

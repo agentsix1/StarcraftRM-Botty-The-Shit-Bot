@@ -30,15 +30,29 @@ public class EventProcessCommand {
                             _action.ChatSay(_args.get(1) + ", is rank " + _rank + " added to the system " + _added, _chatbox);
                         }
                     } else if (_pj.hasPermission(_user, _command.get("permission"))) {
-                        _action.ChatSay(commandReplace(_command.get("usage"),_user,_channel, _args), _chatbox);
+                        _action.ChatSay(commandReplace(_command.get("usage"),_user, _message, _channel, _args), _chatbox);
                     }
                 }
             }
         } catch (Exception e) {}
     }
 
-    public String commandReplace(String _text, String _user, String _channel, List<String> args) {
-        return _text.replaceAll("%TIME%", _other.getTime()).replaceAll("%DETAIL_TIME%", _other.getDetailedTime()).replaceAll("%USER%", _user);
+    public String commandReplace(String _text, String _user, String _message, String _channel, List<String> _args) {
+        String _msg = "";
+        try {
+            int i = 0;
+            for (String arg : _args) {
+                if (i == 0) { i++; continue; }
+                _msg += " " + arg;
+                i++;
+            }
+            _msg = _msg.substring(1, _msg.length());
+        } catch (Exception e) {
+
+        }
+        return _text.replaceAll("%TIME%", _other.getTime()).
+                replaceAll("%DETAIL_TIME%", _other.getDetailedTime()).replaceAll("%USER%", _user).
+                replaceAll("%MSG%", _msg);
     }
 
     public boolean hasTrigger(String _cmd, String _trigger) {
