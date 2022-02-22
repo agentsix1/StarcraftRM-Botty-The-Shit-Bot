@@ -25,7 +25,7 @@ There is no anti spam features built into this program as of the release of the 
 !ping  
 !time  
 !whoami  
-!whois
+!whois  
 !j/!join
 
 # Giving your self permission
