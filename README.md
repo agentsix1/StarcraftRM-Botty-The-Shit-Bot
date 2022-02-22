@@ -3,7 +3,8 @@ This is a ocr program that controls a starcraft remastered client in Windowed mo
 
 # Requirements
 sikulixide-2.0.5
-https://launchpad.net/sikuli/sikulix/2.0.5/+download/sikulixide-2.0.5.jar
+https://launchpad.net/sikuli/sikulix/2.0.5/+download/sikulixide-2.0.5.jar  
+JDK 11.0.12+
 
 # Setup
 The program is fairly easy to use and isn't anywhere near a finished product.
@@ -25,7 +26,7 @@ There is no anti spam features built into this program as of the release of the 
 !time  
 !whoami  
 !whois
-
+!j/!join
 
 # Giving your self permission
 To give your self permission to use the bot. Simply open the 'users.json' file and add the following
@@ -52,7 +53,7 @@ To give your self permission to use the bot. Simply open the 'users.json' file a
   **%TIME%** - Returns time using format 'hh:mm:ss aa'  
   **%DETAIL_TIME%** - Returns time using format 'hh:mm:ss.SSS aa'  
   **%USER%** - Returns the persons name who is using the command  
-  
+  **%MSG%** - Returns the rest of the text typed after the command
   
   
   # Features to be added
