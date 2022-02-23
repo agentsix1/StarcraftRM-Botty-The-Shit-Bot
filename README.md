@@ -26,10 +26,10 @@ There is no anti spam features built into this program as of the release of the 
 !time  
 !whoami  
 !whois  
-!j/!join
-!flip
-!say
-!sayme
+!j/!join  
+!flip  
+!say  
+!sayme  
 
 # Giving your self permission
 To give your self permission to use the bot. Simply open the 'users.json' file and add the following
