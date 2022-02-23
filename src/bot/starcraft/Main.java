@@ -9,7 +9,7 @@ import org.sikuli.basics.Settings;
 import org.sikuli.script.Location;
 
 public class Main {
-    public static String _ver = "v0.0.2 dev";
+    public static String _ver = "v0.0.3 dev";
     public static void main(String[] args) {
         Game _game = new Game("Brood War");
         Other _other = new Other();

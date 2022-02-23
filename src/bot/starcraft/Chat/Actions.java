@@ -23,4 +23,11 @@ public class Actions {
         }
     }
 
+    public boolean AddUser() {
+        //check if the user has been added
+        //if the user has not been added. Check if it is a valid rank
+        //if the rank is valid then add the user
+        //return the bool value
+        return false;
+    }
 }

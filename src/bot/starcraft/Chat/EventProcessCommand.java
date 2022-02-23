@@ -1,6 +1,7 @@
 package bot.starcraft.Chat;
 
 import bot.starcraft.JSON.CommandJson;
+import bot.starcraft.JSON.ConfigJson;
 import bot.starcraft.JSON.PermissionJson;
 import bot.starcraft.Main;
 import bot.starcraft.Object.ChatBox;
@@ -14,8 +15,9 @@ public class EventProcessCommand {
         PermissionJson _pj = new PermissionJson();
         Actions _action = new Actions();
         CommandJson _cj = new CommandJson();
-        String _triggerA = "!";
-        String _triggerB = "i";
+        ConfigJson _c = new ConfigJson();
+        String _triggerA = _c.getString("trigger-a");
+        String _triggerB = _c.getString("trigger-b");
         try {
             if (hasTrigger(_message, _triggerA) || hasTrigger(_message, _triggerB)) {
                 List<String> _args = getCommandArgs(_message);
@@ -30,9 +32,14 @@ public class EventProcessCommand {
                             String _rank = _pj.getPermission(_args.get(1));
                             String _added = _pj.getAdded(_args.get(1));
                             _action.ChatSay(_args.get(1) + ", is rank " + _rank + " added to the system " + _added, _chatbox);
+                        } else if (_args.get(0).toLowerCase().equals("add") && _pj.hasPermission(_user, _command.get("permission"))) {
+                            if (_action.AddUser()) {
+                                _action.ChatSay(_args.get(1) + " has been added with \"" + _args.get(2) + "\" rank.", _chatbox);
+                            } else {
+                                _action.ChatSay(_args.get(1) + " was unable to be added to \"" + _args.get(2) + "\" rank.", _chatbox);
+                            }
                         } else if (_args.get(0).toLowerCase().equals("flip") && _pj.hasPermission(_user, _command.get("permission"))) {
                             _action.ChatSay("The coin is showing " + _action.CoinFlip(), _chatbox);
-
                         }
                     } else if (_pj.hasPermission(_user, _command.get("permission"))) {
                         _action.ChatSay(commandReplace(_command.get("usage"),_user, _message, _channel, _args), _chatbox);

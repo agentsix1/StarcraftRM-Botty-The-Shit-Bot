@@ -75,6 +75,12 @@
     "usage":"N/A",
     "timeout":"60",
     "built-in":"true"
+  },
+  {
+    "command":"add",
+    "permission":"Owner",
+    "usage":"N/A",
+    "timeout":"60",
+    "built-in":"true"
   }
-
 ]

@@ -60,4 +60,20 @@ public class ConfigJson {
         }
         return false;
     }
+    public String getString(String _request) {
+        try {
+            JSONParser parser = new JSONParser();
+            JSONArray ___config = (JSONArray) parser.parse(new FileReader("src/bot/starcraft/JSON/config.json"));
+            Object __config = ___config.get(0);
+            JSONObject _config = (JSONObject) __config;
+            try {
+                return _config.get(_request).toString();
+            } catch (Exception e) {
+                return "";
+            }
+        } catch (IOException | ParseException e) {
+            //e.printStackTrace();
+        }
+        return "";
+    }
 }

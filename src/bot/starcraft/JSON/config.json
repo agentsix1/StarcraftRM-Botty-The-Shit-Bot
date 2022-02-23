@@ -1,5 +1,7 @@
 [
   {
+    "trigger-a": "-",
+    "trigger-b": "--",
     "window-size-x": 1285,
     "window-size-y": 965,
     "chat-offset-x": 83,
