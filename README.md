@@ -74,7 +74,5 @@ To give your self permission to use the bot. Simply open the 'users.json' file a
   And much much more!
   
   # Known Bugs
-  	~~  
-    1. messages with no visible text will break the logging of text and lock up the program 
-    ~~
+  	~~1. messages with no visible text will break the logging of text and lock up the program~~
     test
