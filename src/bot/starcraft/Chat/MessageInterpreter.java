@@ -16,22 +16,30 @@ public class MessageInterpreter {
     }
     public String getChannel(String _msg) {
         String _txt = "";
-        if (_msg.contains("(")) {
-            _txt = _msg.substring(_msg.indexOf("(") + 4, _msg.indexOf("]"));
-        } else if (_msg.contains("[")){
-            _txt = _msg.substring(_msg.indexOf("[") + 4, _msg.indexOf("]"));
-        } else if (_msg.contains("{")) {
-            _txt = _msg.substring(_msg.indexOf("{") + 4, _msg.indexOf("]"));
+        try {
+            if (_msg.contains("(")) {
+                return _msg.substring(_msg.indexOf("(") + 4, _msg.indexOf("]"));
+            } else if (_msg.contains("[")){
+                return _msg.substring(_msg.indexOf("[") + 4, _msg.indexOf("]"));
+            } else if (_msg.contains("{")) {
+                return _msg.substring(_msg.indexOf("{") + 4, _msg.indexOf("]"));
+            }
+        } catch (Exception e) {
+            return _txt;
         }
+
         return _txt;
     }
     public String getMessage(String _msg) {
         String _txt = "";
-        if (_msg.contains(":")) {
-            _txt = _msg.substring(_msg.indexOf(":")+2, _msg.length());
-        } else {
-            _txt = _msg;
+        try {
+            if (_msg.contains(":")) {
+                return _msg.substring(_msg.indexOf(":")+2, _msg.length());
+            } else {
+                return _msg;
+            }
+        } catch (Exception e) {
+            return _txt;
         }
-        return _txt;
     }
 }

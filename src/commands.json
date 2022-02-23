@@ -1,15 +1,15 @@
 [
   {
-    "command":"test",
-    "permission":"Guest",
-    "usage":"what in the world is this nonsense",
+    "command":"example",
+    "permission":"Owner",
+    "usage":"This is the example command.",
     "timeout":"300",
     "built-in":"false"
   },
   {
     "command":"ver",
     "permission":"Guest",
-    "usage":"Shit \"OCR\" v0.0.1PR - By: Agentsix1",
+    "usage":"BTSB %VER% - By: Agentsix1",
     "timeout":"300",
     "built-in":"false"
   },
@@ -52,7 +52,6 @@
     "command":"j",
     "permission":"Admin",
     "usage":"/join %MSG%",
-
     "timeout":"60",
     "built-in":"false"
   }
