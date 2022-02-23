@@ -78,4 +78,5 @@ To give your self permission to use the bot. Simply open the 'users.json' file a
     3. possibly has issues understanding messages from a user that is longer that 3 or 4 lines  
     4. does not currently understand /me messages  
     5. not all server messages have been coded in to be detected and ignored  
+    6. sayme is currently conflicting with the ocr of reading messages and casuing issues
     
