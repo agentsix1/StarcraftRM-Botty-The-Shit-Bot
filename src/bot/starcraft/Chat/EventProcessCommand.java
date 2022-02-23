@@ -1,9 +1,11 @@
 package bot.starcraft.Chat;
 
+import bot.starcraft.JSON.CommandJson;
+import bot.starcraft.JSON.PermissionJson;
+import bot.starcraft.Main;
 import bot.starcraft.Object.ChatBox;
 import bot.starcraft.Object.Game;
 
-import java.text.SimpleDateFormat;
 import java.util.*;
 
 public class EventProcessCommand {
@@ -20,14 +22,17 @@ public class EventProcessCommand {
                 Dictionary<String, String> _command = _cj.getCommand(_args.get(0));
                 if (_command != new Hashtable<String, String>()) {
                     if (_command.get("built-in").equals("true")) {
-                        if (_args.get(0).toLowerCase().equals("whoami") && _args.size() == 1 && _pj.hasPermission(_user, "User")) {
+                        if (_args.get(0).toLowerCase().equals("whoami") && _args.size() == 1 && _pj.hasPermission(_user, _command.get("permission"))) {
                             String _rank = _pj.getPermission(_user);
                             String _added = _pj.getAdded(_user);
                             _action.ChatSay(_user + ", is rank " + _rank + " added to the system " + _added, _chatbox);
-                        } else if (_args.get(0).toLowerCase().equals("whois") && _args.size() > 1 && _pj.hasPermission(_user, "User")) {
+                        } else if (_args.get(0).toLowerCase().equals("whois") && _args.size() > 1 && _pj.hasPermission(_user, _command.get("permission"))) {
                             String _rank = _pj.getPermission(_args.get(1));
                             String _added = _pj.getAdded(_args.get(1));
                             _action.ChatSay(_args.get(1) + ", is rank " + _rank + " added to the system " + _added, _chatbox);
+                        } else if (_args.get(0).toLowerCase().equals("flip") && _pj.hasPermission(_user, _command.get("permission"))) {
+                            _action.ChatSay("The coin is showing " + _action.CoinFlip(), _chatbox);
+
                         }
                     } else if (_pj.hasPermission(_user, _command.get("permission"))) {
                         _action.ChatSay(commandReplace(_command.get("usage"),_user, _message, _channel, _args), _chatbox);
@@ -52,7 +57,7 @@ public class EventProcessCommand {
         }
         return _text.replaceAll("%TIME%", _other.getTime()).
                 replaceAll("%DETAIL_TIME%", _other.getDetailedTime()).replaceAll("%USER%", _user).
-                replaceAll("%MSG%", _msg);
+                replaceAll("%MSG%", _msg).replaceAll("%VER%", Main._ver);
     }
 
     public boolean hasTrigger(String _cmd, String _trigger) {

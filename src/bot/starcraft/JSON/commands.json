@@ -1,0 +1,80 @@
+[
+  {
+    "command":"example",
+    "permission":"Owner",
+    "usage":"This is the example command.",
+    "timeout":"300",
+    "built-in":"false"
+  },
+  {
+    "command":"ver",
+    "permission":"Guest",
+    "usage":"BTSB %VER% - By: Agentsix1",
+    "timeout":"300",
+    "built-in":"false"
+  },
+  {
+    "command":"ping",
+    "permission":"Guest",
+    "usage":"Pong!",
+    "timeout":"60",
+    "built-in":"false"
+  },
+  {
+    "command":"time",
+    "permission":"Guest",
+    "usage":"Hello %USER%, the system's time is currently %TIME%",
+    "timeout":"300",
+    "built-in":"false"
+  },
+  {
+    "command":"whoami",
+    "permission":"User",
+    "usage":"N/A",
+    "timeout":"30",
+    "built-in":"true"
+  },
+  {
+    "command":"whois",
+    "permission":"User",
+    "usage":"N/A",
+    "timeout":"30",
+    "built-in":"true"
+  },
+  {
+    "command":"join",
+    "permission":"Admin",
+    "usage":"/join %MSG%",
+    "timeout":"60",
+    "built-in":"false"
+  },
+  {
+    "command":"j",
+    "permission":"Admin",
+    "usage":"/join %MSG%",
+    "timeout":"60",
+    "built-in":"false"
+  },
+  {
+    "command":"say",
+    "permission":"User",
+    "usage":"%MSG%",
+    "timeout":"60",
+    "built-in":"false"
+  },
+  {
+    "command":"sayme",
+    "permission":"User",
+    "usage":"/me %MSG%",
+    "timeout":"60",
+    "built-in":"false"
+  },
+  {
+    "command":"flip",
+    "permission":"Guest",
+    "usage":"N/A",
+    "timeout":"60",
+    "built-in":"true"
+  }
+
+]

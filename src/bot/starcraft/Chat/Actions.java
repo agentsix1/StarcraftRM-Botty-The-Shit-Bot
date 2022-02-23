@@ -3,6 +3,8 @@ package bot.starcraft.Chat;
 import bot.starcraft.Object.ChatBox;
 import org.sikuli.script.Key;
 
+import java.util.Random;
+
 public class Actions {
 
     public void ChatSay(String _text, ChatBox _chatbox) {
@@ -11,8 +13,14 @@ public class Actions {
         _chatbox.r.type(Key.ENTER);
     }
 
-    public String GetUsername(String _text) {
-        return "";
+    public String CoinFlip() {
+        Random randomNum = new Random();
+        int result = randomNum.nextInt(2);
+        if(result == 0){
+            return "Heads";
+        }else{
+            return "Tails";
+        }
     }
 
 }

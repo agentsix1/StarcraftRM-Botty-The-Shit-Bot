@@ -1,0 +1,18 @@
+[
+  {
+    "window-size-x": 1285,
+    "window-size-y": 965,
+    "chat-offset-x": 83,
+    "chat-offset-y": 775,
+    "chat-offset-w": 615,
+    "chat-offset-h": 100,
+    "chat-highlight": false,
+    "chat-highlight-time": 2,
+    "chatbox-offset-x": 700,
+    "chatbox-offset-y": 900,
+    "chatbox-offset-w": 10,
+    "chatbox-offset-h": 10,
+    "chatbox-highlight": false,
+    "chatbox-highlight-time": 2
+  }
+]

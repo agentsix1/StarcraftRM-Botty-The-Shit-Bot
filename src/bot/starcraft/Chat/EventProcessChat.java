@@ -1,5 +1,6 @@
 package bot.starcraft.Chat;
 
+import bot.starcraft.JSON.ConfigJson;
 import bot.starcraft.Object.Chat;
 import bot.starcraft.Object.ChatBox;
 import bot.starcraft.Object.Game;
@@ -15,14 +16,22 @@ public class EventProcessChat extends Thread {
     ChatBox _chatbox;
     public Processing _process = new Processing();
     public Other _other = new Other();
-
+    public ConfigJson _c = new ConfigJson();
 
     public void run(){
         while (true) {
             _game = new Game("Brood War");
             _game.a.focus();
-            Chat _chat = new Chat(_game.x + 65 , _game.y + 808, 635, 92);
-            _chatbox = new ChatBox(_game.x+700, _game.y+925, 10, 10);
+            _chat = new Chat(_game.x + _c.getInt("chat-offset-x"),
+                             _game.y + _c.getInt("chat-offset-y"),
+                                          _c.getInt("chat-offset-w"),
+                                          _c.getInt("chat-offset-h"));
+            _chatbox = new ChatBox(_game.x+_c.getInt("chatbox-offset-x"),
+                                   _game.y+_c.getInt("chatbox-offset-y"),
+                                              _c.getInt("chatbox-offset-w"),
+                                              _c.getInt("chatbox-offset-h"));
+            if (_c.getBool("chat-highlight")) { _chat.r.highlight(_c.getInt("chat-highlight-time"), "red"); }
+            if (_c.getBool("chatbox-highlight")) { _chatbox.r.highlight(_c.getInt("chatbox-highlight-time"), "red"); }
             try {
                 _process.UpdateMessages(_chat.r.text());
                 if (_process.NewMessages.size() > 0) {
