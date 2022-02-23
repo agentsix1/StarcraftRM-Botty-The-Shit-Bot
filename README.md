@@ -8,7 +8,11 @@ JDK 11.0.12+
 
 # Setup
 The program is fairly easy to use and isn't anywhere near a finished product.
-I would highly suggest only running this in eclipse or IntelliJ IDEA.
+I would highly suggest only running this in eclipse or IntelliJ IDEA.    
+
+
+**A Screen Resoultion of 1920x1200 is REQUIRED**  
+(This will remain a requirement until I add in dynamic stuff... Which should be an update coming in the near future!)
 
 1. Open and run starcraft Remastered the lastest version. Put this into the windowed mod with borders. No promises this will actually work as I am not sure if they change dimensions on other clients. I am sure I will go about making a better method for this later where it can accustom all shapes and sizes.
 2. Run the program.
@@ -25,7 +29,7 @@ There is no anti spam features built into this program as of the release of the 
 !ping  
 !time  
 !whoami  
-!whois
+!whois  
 !j/!join
 
 # Giving your self permission
@@ -68,3 +72,6 @@ To give your self permission to use the bot. Simply open the 'users.json' file a
   9. Trivia
   
   And much much more!
+  
+  # Known Bugs
+  1. messages with no visible text will break the logging of text and lock up the program
